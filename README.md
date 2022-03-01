@@ -9,3 +9,10 @@
 ### ReduxForm is from https://redux-form.com/8.3.0/examples/simple/
 
 ### ReduxForm is very powerful React Redux libraries for making easy Jason formatted forms. 
+### Axios is used here instead of Fetch call
+### https://github.com/axios/axios#creating-an-instance
+`const instance = axios.create({
+  baseURL: 'https://some-domain.com/api/',
+  timeout: 1000,
+  headers: {'X-Custom-Header': 'foobar'}
+});`
