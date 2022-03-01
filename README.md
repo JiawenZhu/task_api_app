@@ -4,6 +4,8 @@
 ### cd to client folder and do command ***npm install***
 ### after pack being installed, then type command ***npm start*** --- this will start the client server
 
+![app image](../../../task_api_app/blob/main/Screen%20Shot%202022-03-01%20at%2012.40.05%20PM.png?raw=true)
+
 ### libraries are being used here
 
 ### ReduxForm is from https://redux-form.com/8.3.0/examples/simple/
