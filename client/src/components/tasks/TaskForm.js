@@ -11,19 +11,21 @@ class TaskForm extends React.Component {
       );
     }
   }
-
-  renderInput = ({ input, label, meta }) => {
+  // hock up with inputs
+  renderInput = ({ input, label, type, meta }) => {
     const className = `field ${meta.error && meta.touched ? 'error' : ''}`;
     return (
+      // this is a customized input
       <div className={className}>
         <label>{label}</label>
-        <input {...input} autoComplete="off" />
+        <input {...input} autoComplete="off" type={type}/>
         {this.renderError(meta)}
       </div>
     );
   };
 
   onSubmit = formValues => {
+    // all information from forms are submitted 
     this.props.onSubmit(formValues);
   };
 
@@ -33,7 +35,7 @@ class TaskForm extends React.Component {
         onSubmit={this.props.handleSubmit(this.onSubmit)}
         className="ui form error"
       >
-        <input name="date" component={this.renderInput} label="Enter due date" type="date"/>
+        <Field name="date" component={this.renderInput} label="Enter due date" type="date"/>
         <Field
           name="description"
           component={this.renderInput}
